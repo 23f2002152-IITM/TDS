@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import CORS
 import json
 
 app = Flask(__name__)
+CORS(app)
 
 marks_db = json.load(open('q-vercel-python.json'))
 
